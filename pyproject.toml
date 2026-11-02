@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gds34can"
+version = "0.1.0"
+description = "SteadyWin GDS34 motor driver over CAN (SocketCAN), GIM protocol rev2.2"
+readme = "README.md"
+authors = [{ name = "dodo-daiki" }]
+requires-python = ">=3.10"
+dependencies = ["python-can>=4.0"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Repository = "https://github.com/dodo-daiki/gds34can"
+
+[tool.setuptools]
+packages = ["gds34can"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
