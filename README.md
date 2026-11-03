@@ -88,7 +88,11 @@ cd gds34can
 pip install -e .            # テストも動かすなら pip install -e ".[test]"
 ```
 
-リポジトリは非公開なので、clone には GitHub の認証（`gh auth login` など）が要る。
+clone せずに入れる場合（examples とテストは付いてこない）:
+
+```sh
+pip install "git+https://github.com/dodo-daiki/gds34can.git"
+```
 
 Raspberry Pi OS では、apt の `python3-can` をそのまま使えるように `--system-site-packages` 付きの venv に入れるとよい。
 
